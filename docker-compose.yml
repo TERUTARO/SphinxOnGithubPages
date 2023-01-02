@@ -1,0 +1,8 @@
+version: '3.8'
+services: 
+  sphinx: 
+    build:
+      context: .
+      dockerfile: ./infrastructure/docker/sphinx/Dockerfile
+    ports:
+      - '8088:80'
