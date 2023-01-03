@@ -4,10 +4,9 @@ services:
     build:
       context: .
       dockerfile: ./infrastructure/docker/sphinx/Dockerfile
+    tty: true
     ports:
       - ${port}:8000
     volumes: 
       - ${root_dir}/src:/var/src
-      - ${root_dir}/build:/var/build
-      - ./infrastructure/config:/var/config
-    
+      - ${root_dir}/build:/var/build]
