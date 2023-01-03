@@ -18,3 +18,6 @@ RUN apt-get update && \
 # python package install 
 COPY ./infrastructure/docker/config/requirements.conf /config
 RUN pip install -r requirements.conf
+
+# change workdirectory
+WORKDIR /var/src
