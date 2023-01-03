@@ -5,4 +5,9 @@ services:
       context: .
       dockerfile: ./infrastructure/docker/sphinx/Dockerfile
     ports:
-      - '8088:80'
+      - ${port}:8000
+    volumes: 
+      - ${root_dir}/src:/var/src
+      - ${root_dir}/build:/var/build
+      - ./infrastructure/config:/var/config
+    
